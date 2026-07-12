@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nguyễn Thị Minh Anh - Portfolio Overview</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Space+Mono:wght@700&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-container-low": "#f6f3f2",
+            "surface-container-high": "#eae7e7",
+            "secondary-fixed": "#ffd8ea",
+            "background": "#fcf9f8",
+            "error-container": "#ffdad6",
+            "on-primary-fixed": "#001d31",
+            "inverse-surface": "#303030",
+            "inverse-on-surface": "#f3f0f0",
+            "secondary": "#8a486f",
+            "on-tertiary-fixed-variant": "#454747",
+            "primary": "#006194",
+            "surface-container-highest": "#e4e2e1",
+            "inverse-primary": "#93ccff",
+            "on-background": "#1b1c1c",
+            "surface-container-lowest": "#ffffff",
+            "on-error": "#ffffff",
+            "on-primary-fixed-variant": "#004b74",
+            "surface-container": "#f0eded",
+            "on-tertiary-fixed": "#1a1c1c",
+            "surface": "#fcf9f8",
+            "on-primary-container": "#fdfcff",
+            "secondary-container": "#ffaeda",
+            "primary-container": "#007bba",
+            "on-surface": "#1b1c1c",
+            "tertiary": "#5a5c5c",
+            "on-secondary-fixed-variant": "#6f3157",
+            "surface-tint": "#006398",
+            "error": "#ba1a1a",
+            "on-tertiary-container": "#fcfcfc",
+            "on-secondary": "#ffffff",
+            "on-secondary-container": "#7c3d63",
+            "surface-variant": "#e4e2e1",
+            "on-secondary-fixed": "#3a0329",
+            "on-primary": "#ffffff",
+            "on-surface-variant": "#404850",
+            "on-error-container": "#93000a",
+            "outline-variant": "#bfc7d2",
+            "outline": "#707881",
+            "primary-fixed-dim": "#93ccff",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#c6c6c7",
+            "tertiary-container": "#737575",
+            "primary-fixed": "#cde5ff",
+            "tertiary-fixed": "#e2e2e2",
+            "surface-bright": "#fcf9f8",
+            "surface-dim": "#dcd9d9",
+            "secondary-fixed-dim": "#ffaeda"
+          },
+          "borderRadius": {
+            "DEFAULT": "1rem",
+            "lg": "2rem",
+            "xl": "3rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "overlap-sm": "-16px",
+            "overlap-lg": "-64px",
+            "overlap-md": "-32px",
+            "gutter": "24px",
+            "margin-page": "40px"
+          },
+          "fontFamily": {
+            "display-lg-mobile": ["Bricolage Grotesque"],
+            "label-caps": ["Space Mono"],
+            "headline-sm": ["Bricolage Grotesque"],
+            "body-md": ["Be Vietnam Pro"],
+            "body-lg": ["Be Vietnam Pro"],
+            "display-xl": ["Bricolage Grotesque"],
+            "headline-md": ["Bricolage Grotesque"],
+            "display-lg": ["Bricolage Grotesque"]
+          },
+          "fontSize": {
+            "display-lg-mobile": ["48px", {"lineHeight": "44px", "fontWeight": "800"}],
+            "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+            "headline-sm": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+            "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+            "headline-md": ["48px", {"lineHeight": "52px", "fontWeight": "700"}],
+            "display-lg": ["80px", {"lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      background-color: theme('colors.background');
+      font-family: theme('fontFamily.body-md');
+      color: theme('colors.on-background');
+      overflow-x: hidden;
+    }
+    
+    .paper-texture {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.03;
+      background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+    }
+
+    .doodle-star {
+      color: theme('colors.secondary-container');
+      filter: drop-shadow(2px 2px 0px theme('colors.secondary'));
+    }
+
+    .tape-accent {
+      background-color: theme('colors.secondary-fixed');
+      opacity: 0.7;
+      transform: rotate(-15deg);
+    }
+
+    .polaroid {
+      background: white;
+      padding: 12px 12px 40px 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Hand-drawn underline effect */
+    .drawn-underline {
+      position: relative;
+      display: inline-block;
+    }
+    .drawn-underline::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: theme('colors.secondary-container');
+      border-radius: 2px;
+      transform: rotate(-1deg);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background">
+<div class="paper-texture"></div>
+<!-- Top Navigation Bar -->
+<header class="bg-background/80 dark:bg-background/80 backdrop-blur-md border-b-2 border-on-background/10 docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-margin-page py-4 mx-auto max-w-7xl">
+<h1 class="font-display-lg-mobile text-headline-sm text-primary dark:text-inverse-primary italic">Minh Anh.</h1>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<!-- Mobile Tab Nav (Simplified for small screens) -->
+<nav class="flex overflow-x-auto gap-6 px-margin-page pb-2 no-scrollbar">
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary whitespace-nowrap py-1 font-label-caps text-label-caps" href="#">Overview</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant opacity-70 whitespace-nowrap py-1 font-label-caps text-label-caps hover:text-secondary transition-colors" href="#">Assignments</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant opacity-70 whitespace-nowrap py-1 font-label-caps text-label-caps hover:text-secondary transition-colors" href="#">Evidence</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant opacity-70 whitespace-nowrap py-1 font-label-caps text-label-caps hover:text-secondary transition-colors" href="#">Rubric</a>
+</nav>
+</header>
+<main class="relative z-10 w-full overflow-hidden">
+<!-- Hero Section -->
+<section class="bg-primary px-margin-page pt-12 pb-24 relative overflow-hidden">
+<!-- Background Star Doodle -->
+<span class="material-symbols-outlined absolute top-10 -right-4 text-[180px] opacity-20 text-secondary-container rotate-12" style="font-variation-settings: 'FILL' 0;">grade</span>
+<div class="relative z-20 space-y-8">
+<div class="space-y-0">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-surface-container-lowest leading-none">hello</h2>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-surface-container-lowest leading-none">there,</h2>
+<div class="flex items-center gap-4">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-surface-container-lowest leading-none">i'm</h2>
+<span class="material-symbols-outlined text-secondary-container text-6xl animate-pulse" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-surface-container-lowest leading-none underline decoration-secondary-container decoration-8">Minh Anh</h2>
+</div>
+<p class="font-body-lg text-surface-container-lowest/90 max-w-sm">
+          A creative soul navigating the intersection of academic rigor and expressive design. Welcome to my curated journal of intellectual and artistic growth.
+        </p>
+<!-- Polaroid Stack -->
+<div class="flex flex-col gap-overlap-md pt-8">
+<div class="polaroid rotate-3 self-center w-64 relative group transition-transform hover:rotate-0">
+<div class="tape-accent absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 z-30"></div>
+<img class="w-full aspect-square object-cover rounded-sm" data-alt="A close-up portrait of a young Vietnamese woman with long dark hair, looking thoughtfully at the camera. The lighting is soft and natural, suggesting a serene afternoon in a quiet academic setting. The aesthetic is clean and artistic, consistent with a creative light-mode portfolio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAq_6-I14KX3oAYCvdEhO1t8FzpcbVoMtfxQy-kpXnCbxEH1TL_rzfKlqv_q5tOTyexzn1lyMQcg6bXbxRIQw_ecHKfqoPlsNKEJ_dZImg2pupJhZ7OfrQE0GS0KxzPVr-nBu6r-fnQ6XRzI4l8RUyJQ-udo5gkjzFXThzAHoiOpYB4ESXzPbl0r0mX0qZHJ16_Wjw52vtobfelJUiMqjbHgfZrNF9F8jhv-KQFCUUP-fW0m6m3D9925LTw5aqDpDRfedZ33_Y071Zf"/>
+<p class="mt-4 font-label-caps text-center text-on-surface-variant">MINH ANH / 2024</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Section -->
+<section class="bg-surface px-margin-page py-20 -mt-12 rounded-t-xl relative z-30 border-t-4 border-primary/10">
+<div class="flex items-center gap-2 mb-12">
+<h3 class="font-display-lg-mobile text-headline-sm text-primary uppercase tracking-tighter">education</h3>
+<span class="h-1 flex-grow bg-primary/20 rounded-full"></span>
+</div>
+<div class="space-y-12">
+<div class="relative group">
+<div class="absolute -left-2 -top-2 w-full h-full bg-secondary-container/30 rounded-xl -rotate-1 group-hover:rotate-0 transition-transform"></div>
+<div class="relative bg-white border-2 border-on-background p-6 rounded-xl space-y-4">
+<div class="flex justify-between items-start">
+<span class="bg-primary text-white font-label-caps text-[10px] px-2 py-1 rounded-full">CURRENT</span>
+<span class="material-symbols-outlined text-primary">school</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">UEB - VNU</h4>
+<p class="font-body-md text-on-surface-variant">Foreign Language Studies &amp; Education Pedagogy</p>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -left-2 -top-2 w-full h-full bg-secondary-fixed/50 rounded-xl rotate-1 group-hover:rotate-0 transition-transform"></div>
+<div class="relative bg-white border-2 border-on-background p-6 rounded-xl space-y-4">
+<div class="flex justify-between items-start">
+<span class="bg-secondary text-white font-label-caps text-[10px] px-2 py-1 rounded-full">2020 - 2023</span>
+<span class="material-symbols-outlined text-secondary">history_edu</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-background">CHUYÊN NGUYỄN TRÃI</h4>
+<p class="font-body-md text-on-surface-variant">High School Distinction • Social Sciences Focus</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Sticker Label -->
+<div class="mt-12 inline-block bg-secondary-container text-secondary px-6 py-2 rounded-full font-label-caps -rotate-2 shadow-sm border-2 border-secondary/20">
+        TOP PERFORMER
+      </div>
+</section>
+<!-- Skills Section (Bentoish) -->
+<section class="bg-surface-container-low px-margin-page py-20">
+<div class="flex items-center gap-2 mb-12 flex-row-reverse">
+<h3 class="font-display-lg-mobile text-headline-sm text-secondary uppercase tracking-tighter">my skills</h3>
+<span class="h-1 flex-grow bg-secondary/20 rounded-full"></span>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<!-- Photo Card -->
+<div class="relative aspect-video rounded-xl overflow-hidden group">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="A creative workspace with a high-end camera, lenses, and sketches spread across a wooden desk. The scene is illuminated by warm, directional light, creating a professional yet intimate atmosphere. Soft pink and bright blue accents from stationery unify the image with the scrapbook theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7VR-onW-1DP1rvY0am7xAdevYguh235Qi8OjdAdn2JRNcJY6LCZmBInc1DU4Y6_baDVPuEhW__d4rMJFJ5zoAFjvd75K7DsnxnLeM-YhYaj7Y170mUuPvnX_LuRx71kFMYgfFkZwRFrc7r4Xtml7pmoyb7sx-dzj_GcAJJR9goab2cHyPhApi3sPDCNwCD2GSAvvRD6-w9lJggmyXvprMgqRmujtszLxvv1yfN06RR-Hub30Eu6XPQyRUP6CT-sqb4-RhbKr-0Cmp"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent flex flex-col justify-end p-6">
+<h4 class="text-white font-headline-sm">Photography</h4>
+<p class="text-white/80 font-body-md">Visual storytelling &amp; composition</p>
+</div>
+</div>
+<!-- Tag Cloud Skill -->
+<div class="bg-white border-2 border-on-background p-6 rounded-xl space-y-6">
+<h4 class="font-label-caps text-primary">CREATIVE TOOLS</h4>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-secondary-fixed text-on-secondary-container font-label-caps rounded-full border border-secondary/20 hover:scale-105 transition-transform">FIGMA</span>
+<span class="px-4 py-2 bg-primary-fixed text-on-primary-fixed-variant font-label-caps rounded-full border border-primary/20 hover:scale-105 transition-transform">ADOBE SUITE</span>
+<span class="px-4 py-2 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps rounded-full border border-tertiary/20 hover:scale-105 transition-transform">MOTION GRAPHICS</span>
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container font-label-caps rounded-full border border-secondary/20 hover:scale-105 transition-transform">EDITING</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="bg-surface-container-highest px-margin-page py-20 relative overflow-hidden">
+<span class="material-symbols-outlined absolute -bottom-10 -left-10 text-[240px] opacity-5 text-primary -rotate-12" style="font-variation-settings: 'FILL' 1;">work</span>
+<h3 class="font-display-lg-mobile text-headline-sm text-on-background mb-12 relative z-10">
+<span class="drawn-underline">experience</span>
+</h3>
+<div class="space-y-8 relative z-10">
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 rounded-full bg-primary border-2 border-white shadow-sm"></div>
+<div class="w-0.5 flex-grow bg-primary/20 my-2"></div>
+</div>
+<div class="pb-8">
+<h4 class="font-headline-sm text-body-lg text-primary leading-tight">STUDIO SHODWE</h4>
+<p class="font-label-caps text-[12px] text-on-surface-variant mb-2 uppercase">Creative Intern</p>
+<p class="font-body-md text-on-surface-variant">Supported senior designers in branding projects and editorial layout for local art zines.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex flex-col items-center">
+<div class="w-4 h-4 rounded-full bg-secondary border-2 border-white shadow-sm"></div>
+</div>
+<div>
+<h4 class="font-headline-sm text-body-lg text-secondary leading-tight">SALFORD &amp; CO.</h4>
+<p class="font-label-caps text-[12px] text-on-surface-variant mb-2 uppercase">Content Creator</p>
+<p class="font-body-md text-on-surface-variant">Led a social media campaign that increased engagement by 40% through cohesive visual storytelling.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Splash -->
+<section class="bg-primary px-margin-page py-24 text-center relative overflow-hidden">
+<span class="material-symbols-outlined absolute top-4 left-4 text-4xl text-secondary-container rotate-45" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined absolute bottom-4 right-4 text-4xl text-secondary-container -rotate-12" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class="relative z-10 space-y-6">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-white leading-none">lets work together</h2>
+<p class="font-body-lg text-white/80 max-w-xs mx-auto">Have an idea or a project? Let's turn it into something extraordinary.</p>
+<div class="flex flex-col gap-4 pt-4">
+<a class="bg-white text-primary px-8 py-4 rounded-full font-label-caps shadow-lg hover:scale-105 transition-transform active:scale-95" href="mailto:hello@reallygreatsite.com">EMAIL ME</a>
+<div class="flex justify-center gap-6 text-white/60 font-label-caps text-[12px]">
+<span>@reallygreatsite</span>
+<span>+123-456-7890</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-surface-container-highest dark:bg-inverse-surface full-width rounded-t-xl mt-overlap-lg relative z-40 shadow-md">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-page py-12 gap-gutter">
+<div class="text-center md:text-left space-y-4">
+<span class="font-display-lg text-headline-md text-primary dark:text-inverse-primary -rotate-2 inline-block">Minh Anh</span>
+<p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface max-w-xs">
+          © 2024 Nguyễn Thị Minh Anh • MSSV: 24071052 • UEB - VNU
+        </p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Behance</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+    // Micro-interactions for the scrapbook feel
+    document.querySelectorAll('.group').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        // Dynamic subtle rotation shift logic if needed
+      });
+    });
+
+    // Handle scroll revealing elements
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    // Initial state for sections to fade in
+    document.querySelectorAll('section').forEach(section => {
+      section.classList.add('transition-all', 'duration-700', 'opacity-100'); // Keep visible for initial load
+    });
+  </script>
+</body></html>

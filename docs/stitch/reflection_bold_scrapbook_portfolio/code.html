@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reflection - Nguyễn Thị Minh Anh</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;700&amp;family=Bricolage+Grotesque:wght@700;800&amp;family=Space+Mono:wght@700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed": "#ffd8ea",
+                        "background": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001d31",
+                        "inverse-surface": "#303030",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#8a486f",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "primary": "#006194",
+                        "surface-container-highest": "#e4e2e1",
+                        "inverse-primary": "#93ccff",
+                        "on-background": "#1b1c1c",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface": "#fcf9f8",
+                        "on-primary-container": "#fdfcff",
+                        "secondary-container": "#ffaeda",
+                        "primary-container": "#007bba",
+                        "on-surface": "#1b1c1c",
+                        "tertiary": "#5a5c5c",
+                        "on-secondary-fixed-variant": "#6f3157",
+                        "surface-tint": "#006398",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#7c3d63",
+                        "surface-variant": "#e4e2e1",
+                        "on-secondary-fixed": "#3a0329",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404850",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#bfc7d2",
+                        "outline": "#707881",
+                        "primary-fixed-dim": "#93ccff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#737575",
+                        "primary-fixed": "#cde5ff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed-dim": "#ffaeda"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "overlap-sm": "-16px",
+                        "overlap-lg": "-64px",
+                        "overlap-md": "-32px",
+                        "gutter": "24px",
+                        "margin-page": "40px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "label-caps": ["Space Mono"],
+                        "headline-sm": ["Bricolage Grotesque"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-xl": ["Bricolage Grotesque"],
+                        "headline-md": ["Bricolage Grotesque"],
+                        "display-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-sm": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-md": ["48px", {"lineHeight": "52px", "fontWeight": "700"}],
+                        "display-lg": ["80px", {"lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.05;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+        .polaroid {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .polaroid:hover {
+            transform: scale(1.02) rotate(1deg);
+        }
+        .tape {
+            background-color: #ffaeda;
+            opacity: 0.7;
+            height: 40px;
+            width: 120px;
+            transform: rotate(-15deg);
+        }
+        .doodle-star {
+            color: #ffaeda;
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- TopAppBar -->
+<nav class="bg-background/80 dark:bg-background/80 backdrop-blur-md border-b-2 border-on-background/10 docked full-width top-0 z-50 sticky transition-all">
+<div class="flex justify-between items-center w-full px-margin-page py-4 mx-auto max-w-7xl">
+<a class="font-display-lg-mobile text-headline-sm text-primary dark:text-inverse-primary italic" href="#">
+                Nguyễn Thị Minh Anh
+            </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Overview</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Assignments</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Evidence</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant opacity-70 hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Rubric</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-inverse-primary font-bold border-b-2 border-primary hover:text-secondary dark:hover:text-secondary-fixed transition-colors" href="#">Reflection</a>
+<button class="material-symbols-outlined text-primary" data-icon="star">star</button>
+</div>
+<button class="md:hidden material-symbols-outlined text-primary" data-icon="menu">menu</button>
+</div>
+</nav>
+<main class="relative max-w-7xl mx-auto px-margin-page py-24">
+<!-- Hero Section -->
+<section class="relative mb-32">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-[0.2em]">SELF-REFLECTION JOURNEY</span>
+<h1 class="font-display-xl text-display-xl relative z-10">
+                reflection<span class="text-primary italic">.</span>
+</h1>
+<div class="absolute -top-12 -right-8 opacity-20 pointer-events-none md:block hidden">
+<span class="material-symbols-outlined text-[200px]" style="font-variation-settings: 'wght' 100">grading</span>
+</div>
+<!-- Overlapping Summary Card -->
+<div class="bg-surface-container-highest p-12 rounded-xl mt-overlap-md relative z-20 md:w-2/3 ml-auto border-2 border-on-background/5">
+<p class="font-body-lg text-body-lg text-on-surface-variant italic leading-relaxed">
+                    "Quá trình học tập không chỉ là việc tiếp nhận kiến thức mới, mà còn là hành trình tự khám phá và định vị bản thân trong thế giới thiết kế đầy biến động."
+                </p>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-12 h-[2px] bg-primary"></div>
+<span class="font-label-caps text-label-caps">Mùa học 2024</span>
+</div>
+</div>
+</section>
+<!-- Main Editorial Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Long Form Text -->
+<div class="lg:col-span-7 space-y-16">
+<!-- Section 1: Những Gì Đã Học Được -->
+<article class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="bg-primary text-on-primary px-3 py-1 rounded-full font-label-caps text-[12px]">01</span>
+<h2 class="font-headline-md text-headline-md">Những Gì Đã Học Được</h2>
+</div>
+<div class="prose font-body-lg text-on-surface leading-loose">
+<p>
+                            Trong suốt khóa học, tôi đã có cơ hội tiếp cận sâu hơn với các nguyên tắc thiết kế hiện đại, từ UI/UX đến tư duy hệ thống Design System. Việc áp dụng lý thuyết vào các bài tập thực hành đã giúp tôi hiểu rõ hơn về cách tạo ra một trải nghiệm người dùng liền mạch và thẩm mỹ.
+                        </p>
+<blockquote class="border-l-4 border-secondary pl-8 my-12 italic text-secondary text-headline-sm font-headline-sm">
+                            Học cách lắng nghe người dùng là bài học quan trọng nhất mà tôi rút ra được.
+                        </blockquote>
+<p>
+                            Tôi cũng học được cách làm việc hiệu quả với các công cụ thiết kế chuyên nghiệp, cũng như cách trình bày ý tưởng một cách thuyết phục nhất trước giảng viên và bạn bè.
+                        </p>
+</div>
+</article>
+<!-- Section 2: Khó Khăn & Thách Thức -->
+<article class="space-y-6 relative">
+<div class="flex items-center gap-4">
+<span class="bg-secondary text-on-secondary px-3 py-1 rounded-full font-label-caps text-[12px]">02</span>
+<h2 class="font-headline-md text-headline-md">Khó Khăn &amp; Thách Thức</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-surface-container-low p-8 rounded-lg border-2 border-on-background/5 rotate-1">
+<h3 class="font-headline-sm text-headline-sm mb-4 text-primary">01.</h3>
+<p class="font-body-md text-on-surface-variant">
+                                Việc cân bằng giữa sự sáng tạo cá nhân và các quy chuẩn thiết kế đôi khi khiến tôi cảm thấy bối rối. 
+                            </p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-lg border-2 border-on-background/5 -rotate-1">
+<h3 class="font-headline-sm text-headline-sm mb-4 text-secondary">02.</h3>
+<p class="font-body-md text-on-surface-variant">
+                                Áp lực thời gian hoàn thành các đồ án lớn đòi hỏi kỹ năng quản lý dự án cực kỳ nghiêm túc.
+                            </p>
+</div>
+</div>
+</article>
+</div>
+<!-- Right Column: Visual Collages & Polaroids -->
+<div class="lg:col-span-5 relative space-y-12">
+<!-- Polaroid 1 -->
+<div class="polaroid bg-white p-6 pt-6 pb-16 rotate-3 relative w-full max-w-[400px] mx-auto border border-surface-container-high">
+<div class="tape absolute -top-4 -left-6 z-10"></div>
+<div class="w-full aspect-square bg-surface-container-highest overflow-hidden mb-6">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A cinematic, high-contrast close-up of a student's workspace. A sketchbook is open with intricate pencil architectural sketches, surrounded by professional markers and a digital tablet. The lighting is warm and directional, coming from a nearby desk lamp, creating long shadows. The style is academic, artistic, and deeply focused, mirroring a personal creative journey." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAs-G6MIyvI4-rmfr5AhjdloeJ8we5rMlP9NJXPLNbu0fn3mjntokwk1TGDjbQkS0WSmEVoL_xismZSILhLU1ya5yutHz7xVSAA2yM3wnAYmzUg0chyPxFSLtNMQylfTyGYxctHV5S3CuH-K3GgVNsSgtnQEyKjxXGgztaZ_Ki6yxbTuG-y-Gl0EEw2S56vI0PRpda6zb0tFKPd-fUPdBnxiBa9NS1bPrphjBPyCWxeoVBM9C4PGQssEAkYrj97jgWCO3jxgtcuKB8Y"/>
+</div>
+<p class="font-label-caps text-label-caps text-center text-on-surface-variant">QUÁ TRÌNH LÀM VIỆC</p>
+</div>
+<!-- Polaroid 2 -->
+<div class="polaroid bg-white p-6 pt-6 pb-16 -rotate-2 relative w-full max-w-[400px] mx-auto border border-surface-container-high translate-x-4">
+<div class="w-full aspect-[4/3] bg-surface-container-highest overflow-hidden mb-6">
+<img class="w-full h-full object-cover" data-alt="A lifestyle photo of a young designer, Nguyễn Thị Minh Anh, sitting in a modern, light-filled studio. She is looking thoughtfully out a window with a laptop and a cup of coffee on the wooden table in front of her. The atmosphere is serene and reflective. The lighting is soft morning sun, creating a high-key, airy light-mode feel with a palette of beige, white, and soft blue accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6d1HZvVsx8h2W5tMdsfYvPuTkW62DpGyDQo-UV27jK5-hNUxyUhtZ_FdWVg83y0Pp-SpIkBAqODajAssYsEmCe_PH1z776aqK-d8eQ4pkiwvCwxMgDlTgdruLrU_YO5muyMN7ybg5nTapAjJcSVbX_xy3F1pWiWWpAj4pjPgVOWycw7_BQqQwv8IhemaQmm6BeOUqZMNaWI4UEe8bCO8e77oDZMNYXM7b3XoNHJfziI6mD070fN8s6qMdMkFs15u7w5KsLbGUa87L"/>
+</div>
+<p class="font-label-caps text-label-caps text-center text-on-surface-variant">KHOẢNH KHẮC CHIÊM NGHIỆM</p>
+</div>
+<!-- Scrapbook Doodle -->
+<div class="absolute -bottom-10 right-0 doodle-star animate-pulse">
+<svg fill="currentColor" height="120" viewbox="0 0 100 100" width="120">
+<path d="M50 5L61.8 35.2L94.1 36.4L68.7 56L77.9 87.1L50 69.8L22.1 87.1L31.3 56L5.9 36.4L38.2 35.2L50 5Z"></path>
+</svg>
+</div>
+</div>
+</div>
+<!-- Section 3: Kế hoạch hoàn thiện (Bento Style) -->
+<section class="mt-32 space-y-12">
+<div class="text-center space-y-4">
+<h2 class="font-display-lg text-headline-md">Kế Hoạch Hoàn Thiện</h2>
+<div class="h-[2px] w-24 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 bg-primary text-on-primary p-12 rounded-xl relative overflow-hidden group">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-6">Phát triển Portfolio</h3>
+<p class="font-body-lg opacity-90">Tập trung vào việc hệ thống lại toàn bộ các sản phẩm đã thực hiện trong khóa học, tối ưu hóa giao diện trang web cá nhân để đạt được sự chuyên nghiệp cao nhất.</p>
+</div>
+<div class="mt-12">
+<button class="bg-secondary-container text-on-secondary-container px-8 py-3 rounded-full font-label-caps text-label-caps hover:scale-105 transition-all">CHECKLIST 2025</button>
+</div>
+</div>
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/20 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-110 transition-transform"></div>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-secondary text-on-secondary p-12 rounded-xl flex flex-col justify-center text-center">
+<span class="material-symbols-outlined text-6xl mb-6">auto_awesome</span>
+<h3 class="font-headline-sm text-headline-sm mb-4">Học Kỹ Năng Mới</h3>
+<p class="font-body-md opacity-80">Nghiên cứu sâu hơn về Motion Design và 3D Visual để làm phong phú thêm ngôn ngữ thiết kế.</p>
+</div>
+<!-- Bento Card 3 -->
+<div class="bg-surface-container-highest p-12 rounded-xl border-2 border-on-background/10 md:col-span-3">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-1/2 space-y-6">
+<h3 class="font-headline-md text-headline-md text-primary">Tầm Nhìn 5 Năm</h3>
+<p class="font-body-lg text-on-surface-variant">Tôi đặt mục tiêu trở thành một Senior Designer chuyên về mảng Product Design, nơi tôi có thể kết hợp giữa công nghệ và mỹ thuật để giải quyết các vấn đề thực tế của xã hội.</p>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="bg-background p-4 rounded-lg text-center shadow-sm">
+<p class="font-headline-sm text-primary">2026</p>
+<p class="font-label-caps text-xs">Junior Role</p>
+</div>
+<div class="bg-background p-4 rounded-lg text-center shadow-sm">
+<p class="font-headline-sm text-secondary">2027</p>
+<p class="font-label-caps text-xs">Mid-Level</p>
+</div>
+<div class="bg-background p-4 rounded-lg text-center shadow-sm">
+<p class="font-headline-sm text-primary">2029</p>
+<p class="font-label-caps text-xs">Lead/Senior</p>
+</div>
+<div class="bg-background p-4 rounded-lg text-center shadow-sm">
+<p class="font-headline-sm text-secondary">2030</p>
+<p class="font-label-caps text-xs">Design Director</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface full-width rounded-t-xl mt-overlap-lg shadow-md">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-page py-12 gap-gutter mx-auto max-w-7xl">
+<div class="space-y-2 text-center md:text-left">
+<span class="font-display-lg text-headline-md text-primary dark:text-inverse-primary -rotate-2 inline-block">Minh Anh.</span>
+<p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface">© 2024 Nguyễn Thị Minh Anh • MSSV: 24071052 • UEB - VNU</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Behance</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interactions for polaroids
+        document.querySelectorAll('.polaroid').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const randomRotate = (Math.random() * 6 - 3).toFixed(2);
+                item.style.transform = `scale(1.05) rotate(${randomRotate}deg)`;
+            });
+            item.addEventListener('mouseleave', () => {
+                const baseRotate = item.classList.contains('rotate-3') ? '3deg' : '-2deg';
+                item.style.transform = `scale(1) rotate(${baseRotate})`;
+            });
+        });
+
+        // Sticky Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Assignments - Nguyễn Thị Minh Anh</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@700;800&amp;family=Space+Mono:wght@700&amp;family=Be+Vietnam+Pro:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container-high": "#eae7e7",
+                        "secondary-fixed": "#ffd8ea",
+                        "background": "#fcf9f8",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#001d31",
+                        "inverse-surface": "#303030",
+                        "inverse-on-surface": "#f3f0f0",
+                        "secondary": "#8a486f",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "primary": "#006194",
+                        "surface-container-highest": "#e4e2e1",
+                        "inverse-primary": "#93ccff",
+                        "on-background": "#1b1c1c",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#004b74",
+                        "surface-container": "#f0eded",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "surface": "#fcf9f8",
+                        "on-primary-container": "#fdfcff",
+                        "secondary-container": "#ffaeda",
+                        "primary-container": "#007bba",
+                        "on-surface": "#1b1c1c",
+                        "tertiary": "#5a5c5c",
+                        "on-secondary-fixed-variant": "#6f3157",
+                        "surface-tint": "#006398",
+                        "error": "#ba1a1a",
+                        "on-tertiary-container": "#fcfcfc",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#7c3d63",
+                        "surface-variant": "#e4e2e1",
+                        "on-secondary-fixed": "#3a0329",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#404850",
+                        "on-error-container": "#93000a",
+                        "outline-variant": "#bfc7d2",
+                        "outline": "#707881",
+                        "primary-fixed-dim": "#93ccff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "tertiary-container": "#737575",
+                        "primary-fixed": "#cde5ff",
+                        "tertiary-fixed": "#e2e2e2",
+                        "surface-bright": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "secondary-fixed-dim": "#ffaeda"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "overlap-sm": "-16px",
+                        "overlap-lg": "-64px",
+                        "overlap-md": "-32px",
+                        "gutter": "24px",
+                        "margin-page": "40px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Bricolage Grotesque"],
+                        "label-caps": ["Space Mono"],
+                        "headline-sm": ["Bricolage Grotesque"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "display-xl": ["Bricolage Grotesque"],
+                        "headline-md": ["Bricolage Grotesque"],
+                        "display-lg": ["Bricolage Grotesque"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["48px", {"lineHeight": "44px", "fontWeight": "800"}],
+                        "label-caps": ["14px", {"lineHeight": "20px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "headline-sm": ["32px", {"lineHeight": "36px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-xl": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-md": ["48px", {"lineHeight": "52px", "fontWeight": "700"}],
+                        "display-lg": ["80px", {"lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .scrapbook-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+            pointer-events: none;
+        }
+        .tape-effect {
+            background: rgba(255, 174, 218, 0.6);
+            backdrop-filter: blur(2px);
+        }
+        .handwritten {
+            font-family: 'Space Mono', monospace;
+            transform: rotate(-1deg);
+        }
+        .polaroid-tilt-1 { transform: rotate(-1.5deg); }
+        .polaroid-tilt-2 { transform: rotate(1.2deg); }
+        .polaroid-tilt-3 { transform: rotate(-0.8deg); }
+        
+        .doodle-star {
+            color: #ffaeda;
+            filter: drop-shadow(2px 2px 0px rgba(0,97,148,0.2));
+            user-select: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Texture Overlay -->
+<div class="fixed inset-0 scrapbook-texture z-[100] opacity-30"></div>
+<!-- TopAppBar -->
+<header class="bg-background/80 backdrop-blur-md sticky top-0 z-50 border-b-2 border-on-background/10">
+<div class="flex justify-between items-center w-full px-margin-page py-4 mx-auto max-w-7xl">
+<h1 class="font-display-lg-mobile text-headline-sm text-primary italic">Nguyễn Thị Minh Anh</h1>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant opacity-70 hover:text-secondary transition-colors font-label-caps text-label-caps" href="#">Overview</a>
+<a class="text-primary font-bold border-b-2 border-primary font-label-caps text-label-caps" href="#">Assignments</a>
+<a class="text-on-surface-variant opacity-70 hover:text-secondary transition-colors font-label-caps text-label-caps" href="#">Evidence</a>
+<a class="text-on-surface-variant opacity-70 hover:text-secondary transition-colors font-label-caps text-label-caps" href="#">Rubric</a>
+<a class="text-on-surface-variant opacity-70 hover:text-secondary transition-colors font-label-caps text-label-caps" href="#">Reflection</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary hover:scale-110 transition-transform">star</button>
+<button class="md:hidden material-symbols-outlined text-primary">menu</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-margin-page pt-12 pb-32 relative">
+<!-- Background Doodles -->
+<span class="material-symbols-outlined doodle-star absolute top-20 right-10 text-6xl opacity-40" style="font-variation-settings: 'FILL' 0;">star</span>
+<span class="material-symbols-outlined doodle-star absolute bottom-40 left-5 text-8xl opacity-20" style="font-variation-settings: 'FILL' 1;">star</span>
+<!-- Page Header -->
+<div class="relative mb-20">
+<h2 class="font-display-lg text-display-lg text-primary-container leading-none -rotate-1 inline-block">
+                class assignments
+            </h2>
+<div class="absolute -top-4 -right-8 tape-effect w-32 h-10 -rotate-12 rounded-sm border border-black/5"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mt-8">
+                A curated collection of my academic journey, ranging from data management architectures to the creative application of artificial intelligence.
+            </p>
+</div>
+<!-- Assignment Bento Grid / Scrapbook Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+<!-- Assignment 1: Quản lý dữ liệu -->
+<div class="group relative polaroid-tilt-1 transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
+<div class="absolute -top-6 -left-4 tape-effect w-24 h-8 rotate-45 z-20"></div>
+<div class="bg-surface-container-lowest p-6 pb-12 shadow-md border border-on-surface/5 flex flex-col gap-4">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A clean, top-down view of a designer's desk in a bright light-mode aesthetic. There is a sleek laptop showing a complex data visualization graph with primary blue accents. Scattered around are professional notebooks and a minimalist coffee mug. The mood is highly organized, intellectual, and modern academic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrvXDloYm6ZCvmpVipBHd9_PkVEAEmBQlhLeq-coPUoSo1Dt8e8I8MzhVSClJoYBawZUa84Lujx4mV2d3Gc1nhUCBrWpn14BlucHOZrsWLhZq3Unzd9efPDgsVwXojtsDO1O7AOSLoLND4OaSTg_TzTE4d-lX_OS5zkYbvmYTPhc7GETAE3gjo8FThOtbmktqq70Pvf9rPzeq56iTW7_uQl8tzNlnsTEPFfhQ34c-IqmWQQzRvB6iZ5cCNLNBo80qVC_GpZFa04ocI"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-2 inline-block">WEEK 01</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Quản lý dữ liệu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Implementing robust database architectures and exploring the fundamentals of information hierarchy in modern systems.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-caps text-xs">#SQL</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1 rounded-full font-label-caps text-xs">#Architecture</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -bottom-6 -right-6 text-4xl text-secondary group-hover:rotate-45 transition-transform" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<!-- Assignment 2: Tư duy AI -->
+<div class="group relative polaroid-tilt-2 mt- overlap-md lg:mt-8 transition-all duration-500 hover:rotate-0 hover:scale-[1.02]">
+<div class="absolute -top-4 -right-4 bg-primary-container/40 backdrop-blur-sm w-20 h-10 -rotate-12 z-20 border border-black/5"></div>
+<div class="bg-surface-container-lowest p-6 pb-12 shadow-lg border border-on-surface/5 flex flex-col gap-4">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A futuristic and artistic digital representation of artificial intelligence neural networks. The scene is illuminated by glowing bright blue lines on a crisp white background. Hand-drawn pink star shapes are overlaid to create a collage aesthetic. The style is professional yet experimental, reflecting a creative academic exploration of technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhphd5udGHeLwT92ctSM1eu-IcZpVCEFkxTej-ip8dH53oLH8knK8tbpeWZWb2ISQ5x0-IFpnk4FNgoLdixN6s5KgetoKzWjx_QlpyRs4yJ45ZZ-XtMOkWN8zu9wzSTAuumrT7YSVZYLZ_826uduGOeR6HBammtJie3rmBgpNHAPz4yZW0X9Ghs9Mp_6ek1eG4UXZTXn_HAZRORKLjt_ue0XaS6_Ts7n2lxveTBxEtnNgvYYj1ptjC1qDzNOvsywJk8O4Wl7iotUy6"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-2 inline-block">WEEK 03</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Tư duy AI</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Critical analysis of machine learning ethics and hands-on prompt engineering for generative design workflows.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-caps text-xs">#AI</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1 rounded-full font-label-caps text-xs">#Generative</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assignment 3: Phân tích nghiệp vụ -->
+<div class="group relative polaroid-tilt-3 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] lg:-mt-12">
+<div class="absolute top-1/2 -left-8 tape-effect w-32 h-6 -rotate-90 z-20"></div>
+<div class="bg-surface-container-lowest p-6 pb-12 shadow-md border border-on-surface/5 flex flex-col gap-4">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A high-angle shot of a business whiteboard filled with colorful sticky notes and hand-drawn flowcharts. The setting is a bright, sun-drenched office space with light mode aesthetics. The colors are dominated by primary blues and soft pinks. It captures the energy of a collaborative brainstorming session and meticulous business analysis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADNPM4l5UzRvDU2rS54oYMnyNjfq1dRl7rA7X1b5ljUEMqbBR0wAXqp87KkB-cIuN_iShCeqd_AxmtDZd6ijRDOfhaVW-mPnLarfVnNc9VCyl33kuozQHd2oPk3zMUrAJT5dIFBA3gAJ23LVY7yeLZv_SK5mVjJRNu5w-5DiW-rSY5cOMbF242jwfqEDOziiGQAMMUa52GUw_hm6hOWKOdhO0unOuaopQ5dUmY_XsqHa4gWvUraZwXHGyQOOHU1xHSwhuH8gztLycP"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-2 inline-block">WEEK 05</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Phân tích nghiệp vụ</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Breaking down complex business requirements into actionable technical specifications and user journeys.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-caps text-xs">#Business</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1 rounded-full font-label-caps text-xs">#Strategy</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assignment 4: Thiết kế trải nghiệm -->
+<div class="group relative polaroid-tilt-2 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] lg:col-span-2">
+<div class="absolute -bottom-4 left-1/4 tape-effect w-40 h-10 rotate-3 z-20"></div>
+<div class="bg-surface-container-lowest p-8 pb-14 shadow-xl border border-on-surface/5 flex flex-col md:flex-row gap-8">
+<div class="w-full md:w-1/2 aspect-square overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A vibrant collage of mobile app wireframes and high-fidelity UI screens displayed on a large monitor. The UI features soft gradients and rounded corners in a modern scrapbook style. Surrounding the screen are paper prototypes with hand-drawn notes in black ink. The atmosphere is energetic, professional, and focuses on the tactile nature of design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmSALuqfZ6xN8YF3uKLIzX1TaTJp7uVarGRcCBvpl5fPzYtDw-hIBKt83-4ePuPbUcbY9cCARUFwUqUMmeuFuVsOw4ltekZbLLxKsozG1JA-_4BZMc54t7qgR8Z0z6fFpuJRS7nSDj-RgEGdOCxd-4lj7X1sP1Qo8tSSTDU2dOh9IYe8OESbNespzOBdghlwex1w4KFDMIDPQDCV3Uk6VGKrkGWajdXBzztgD8BL_duBL6LyLxNj1mrChk6inYmV_7RXqP5KItQ3s1"/>
+</div>
+<div class="flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-4 inline-block">WEEK 08</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4 leading-tight">Thiết kế trải nghiệm người dùng</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                            A deep dive into human-centric design, usability testing, and crafting seamless digital narratives through wireframing and prototyping.
+                        </p>
+<div class="flex flex-wrap gap-3">
+<span class="bg-secondary-container text-on-secondary-container px-6 py-2 rounded-full font-label-caps text-sm">#UX_Design</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-6 py-2 rounded-full font-label-caps text-sm">#Prototyping</span>
+<span class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-label-caps text-sm">#User_Research</span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined absolute -top-10 right-10 text-7xl text-primary/20 rotate-12" style="font-variation-settings: 'FILL' 0;">auto_stories</span>
+</div>
+<!-- Assignment 5: Phát triển Front-end -->
+<div class="group relative polaroid-tilt-1 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] lg:mt-overlap-md">
+<div class="absolute -top-6 right-10 tape-effect w-24 h-10 -rotate-45 z-20 opacity-80"></div>
+<div class="bg-surface-container-lowest p-6 pb-12 shadow-md border border-on-surface/5 flex flex-col gap-4">
+<div class="aspect-[4/3] overflow-hidden bg-surface-container relative">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of a glowing computer screen showing lines of clean code in a modern editor like VS Code. The syntax highlighting uses a palette of soft pinks and deep blues. In the blurred background, a warm desk lamp provides a cozy, academic atmosphere. The visual focus is on the technical precision and creative output of front-end development." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9ptA5ecXhKJZs33ldqhGUg1KMtOKOurMZ5H2mZssYlEecOi8TLq4EOPkGoSe7zFpKl-M4aLhXkNU7XS4EH29mMKxMQRv2B5UoarPAcWHx0X6O9lPoGXouTG6gXZ-q_TivUshhJc2HR7PzQX71X-KKEiU6wnR5IvSjgn_uYdxA_Zs9mfXKJGkQq1eMOVyAntm_FHLTu1iKGa3Naq17lYqMVGYghVb9KAc9A4l72nXr7UROfShNVz0RwBm3h8ko-QLlqCrV7LaZpRXo"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-2 inline-block">WEEK 10</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Phát triển Front-end</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            Translating design systems into interactive code using modern frameworks and responsive layout techniques.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-caps text-xs">#TailwindCSS</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1 rounded-full font-label-caps text-xs">#React</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Assignment 6: Đồ án cuối khóa -->
+<div class="group relative polaroid-tilt-3 transition-all duration-500 hover:rotate-0 hover:scale-[1.02] lg:col-start-3 lg:-mt-24">
+<div class="absolute top-0 right-0 p-4 z-20">
+<div class="bg-secondary text-on-secondary w-16 h-16 rounded-full flex items-center justify-center font-label-caps text-xs rotate-12 shadow-lg border-2 border-on-background/10">FINAL</div>
+</div>
+<div class="bg-surface-container-lowest p-6 pb-12 shadow-2xl border-2 border-primary/20 flex flex-col gap-4">
+<div class="aspect-square overflow-hidden bg-primary-container relative">
+<img class="w-full h-full object-cover" data-alt="A celebratory and complex collage representing the culmination of a design degree. It includes overlapping layers of typography, photographic portraits, and technical diagrams. Bright blue and soft pink tape elements are used as visual anchors. The lighting is high-key and joyous, signaling achievement and the professional transition of a graduate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwxKsI5-4d_G5GTmkq5fhOQwYhbDHi1eiMFSu4LCgYNZvCYnvcrBbIUEx1Jogu7vBUnvpoOAyfuzgDVhtWXaQ81qzAmkzOuQ6f8XbqWDEONofjdPUTDltZQv_1Jx7LghH_MgY8v90jE7G26jR64d1WphsbDVM7xwhNH0B6ZZlgXBK1Ll_5Fo7RUVMM8ZEDkfDWTowX29p209YnID3xN6wI2mDM5jOXjmcwO42_1KUuWzJANHi6pgnPFBPoEwMqxy0lb2ZiU1S7QfuI"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary border-b border-secondary/20 mb-2 inline-block">WEEK 15</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Đồ án cuối khóa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                            The capstone project: a comprehensive solution merging research, design, and technical implementation into a single product.
+                        </p>
+<div class="flex flex-wrap gap-2">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-caps text-xs">#Capstone</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant px-4 py-1 rounded-full font-label-caps text-xs">#Launch</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest rounded-t-xl mt-overlap-lg relative z-40 shadow-md">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-page py-12 gap-gutter max-w-7xl mx-auto">
+<div class="text-center md:text-left">
+<span class="font-display-lg text-headline-md text-primary -rotate-2 inline-block mb-4">Minh Anh</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Curating memories, learning systems, and designing the future, one page at a time.
+                </p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-6">
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">LinkedIn</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Behance</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:scale-105 hover:text-secondary transition-all" href="#">Contact</a>
+</div>
+<div class="font-body-md text-on-surface-variant text-sm opacity-60">
+                    © 2024 Nguyễn Thị Minh Anh • MSSV: 24071052 • UEB - VNU
+                </div>
+</div>
+</div>
+</footer>
+<!-- FAB (Contextual) -->
+<button class="fixed bottom-8 right-8 bg-primary text-on-primary w-14 h-14 rounded-full shadow-xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-[60]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">add</span>
+</button>
+<script>
+        // Micro-interaction for scrapbook feel
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const randomRotate = (Math.random() * 4 - 2).toFixed(1);
+                card.style.transform = `rotate(${randomRotate}deg) scale(1.03)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+    </script>
+</body></html>
