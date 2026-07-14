@@ -15,7 +15,6 @@ export default function RubricTable() {
 
   return (
     <div className="relative">
-      <span className="tape left-0 top-8 hidden rotate-[-2deg] md:block" />
       <span className="doodle-star left-1/2 top-0 rotate-6 [--star-opacity:0.36] [--star-size:5.5rem]" />
 
       <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr]">

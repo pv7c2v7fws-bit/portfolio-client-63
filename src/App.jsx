@@ -39,7 +39,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-academic-background text-academic-ink">
+    <div className="min-h-screen bg-academic-background text-academic-ink">
       <header className="sticky top-0 z-50 border-b-2 border-academic-ink/10 bg-academic-background/88 backdrop-blur-md">
         <div className="mx-auto flex h-auto max-w-[1280px] flex-wrap items-center justify-between gap-2 px-5 py-3 sm:h-20 sm:flex-nowrap md:px-10">
           <a href="#top" className="flex min-w-0 items-center gap-3" aria-label="Về đầu trang">
@@ -48,7 +48,7 @@ export default function App() {
             </span>
             <span className="hidden min-w-0 sm:block">
               <span className="section-kicker block">Business Administration Portfolio</span>
-              <span className="block truncate font-display text-2xl font-extrabold italic leading-none text-academic-deep-rose">
+              <span className="block truncate font-display text-2xl font-extrabold italic leading-normal text-academic-deep-rose pb-1">
                 {student.name}
               </span>
             </span>

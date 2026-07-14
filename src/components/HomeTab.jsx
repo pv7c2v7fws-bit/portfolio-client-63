@@ -16,13 +16,17 @@ export default function HomeTab() {
         <div className="relative z-10 grid items-center gap-12 lg:grid-cols-12">
           <div className="min-w-0 lg:col-span-7">
             <span className="sticker rotate-[-2deg] px-5 py-2 font-mono text-xs uppercase tracking-[0.1em]">
-              UEB - VNU • MSSV: 25040736
+              UEB - VNU • MSSV: 25051500
             </span>
-            <h1 className="display-title mt-8 max-w-4xl text-[4.6rem] text-academic-ink min-[420px]:text-[5.5rem] sm:text-[7rem] lg:text-[8.5rem]">
-              Portfolio<br />
-              <span className="text-academic-deep-rose italic">học phần</span>
+            <h1 className="display-title mt-8 max-w-4xl leading-none">
+              <span className="block font-mono text-2xl font-bold uppercase tracking-[0.25em] text-academic-blue min-[420px]:text-3xl sm:text-4xl">
+                digital
+              </span>
+              <span className="block text-[4.8rem] text-academic-blue min-[420px]:text-[6rem] sm:text-[7.5rem] lg:text-[9rem] xl:text-[9.5rem] lowercase leading-none mt-2">
+                portfolio
+              </span>
             </h1>
-            <h2 className="display-title mt-4 max-w-4xl text-[2.8rem] text-academic-ink min-[420px]:text-[3.4rem] sm:text-[4.5rem] lg:text-[5.6rem]">
+            <h2 className="display-title mt-4 max-w-4xl text-[2.2rem] text-academic-ink min-[360px]:text-[2.8rem] sm:text-[3.5rem] md:text-[4rem] lg:text-[4.5rem] xl:text-[5rem] tracking-tight leading-normal pb-1">
               {student.name}
             </h2>
             <div className="paper-card mt-8 max-w-2xl rotate-[0.6deg] bg-academic-blush p-6">
@@ -38,7 +42,7 @@ export default function HomeTab() {
                 <img
                   src={avatarImage}
                   alt={`Ảnh chân dung ${student.name}`}
-                  className="h-full w-full object-cover object-[58%_center] grayscale transition duration-700 hover:grayscale-0"
+                  className="h-full w-full object-cover object-[58%_center]"
                 />
               </div>
               <p className="mt-5 text-center font-mono text-xs font-bold uppercase tracking-[0.18em] text-academic-muted">
